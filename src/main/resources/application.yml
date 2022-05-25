@@ -1,0 +1,17 @@
+
+server:
+  port: 8080
+  servlet:
+    context-path: /${spring.application.name}
+spring:
+  application:
+    name: sep6
+  datasource:
+    #    url: jdbc:mysql://10.110.30.4:3307/uni-cache?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://35.204.25.150:3306/sep6-350713:europe-west4:sep6sql?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false&autoReconnect=true
+    username: root
+    password: sep6
+    #    username: root
+    #    password: Pcp@1024
+    driver-class-name: com.mysql.jdbc.Driver
+
