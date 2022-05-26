@@ -22,12 +22,6 @@ public class Sep6BackendV1Application {
 			System.out.println(bucket.toString());
 		}
 
-
-
-
-
-
-
 	}
 	public static void main(String[] args) {
 
