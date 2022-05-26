@@ -3,6 +3,7 @@ package com.example.sep6backendv1.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.sep6backendv1.entity.Movie;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -10,15 +11,9 @@ import java.util.List;
 public interface MovieMapper extends BaseMapper<Movie> {
     List<Movie> getMovie();
 
-    //    根据id
-    Movie getMovieById(Integer id);
+    Movie selectMovie(Integer id);
 
-    //    增加用户
-    int addMovie(Movie movie);
+    List<Movie> selectMovieByYear(@Param("minYear") int minYear, @Param("maxYear") int maxYear);
 
-    //    修改用户信息
-    int updateMovie(Movie movie);
 
-    //    删除用户
-    int deleteMovie(Integer id);
 }
