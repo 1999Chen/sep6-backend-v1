@@ -12,6 +12,10 @@ import java.util.List;
 public interface PeopleMapper extends BaseMapper<People> {
     List<People> getAllPeople();
 
+    List<People> selectStarsByMovie(int movieId);
+
+    List<People> selectDirectorsByMovie(int movieId);
+
     People selectPeopleByName(String name);
 
     People selectPeopleByMovie(String name);

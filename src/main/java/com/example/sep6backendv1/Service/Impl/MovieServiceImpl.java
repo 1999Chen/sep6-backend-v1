@@ -18,11 +18,9 @@ import java.util.List;
 @Service
 public class MovieServiceImpl implements IMovieService {
 
-
-
     MovieMapper movieMapper;
 
-    public MovieServiceImpl() throws ClassNotFoundException, SQLException {
+    public MovieServiceImpl()  {
         SqlSession ss = MyBatisConnection.getConnection();
         movieMapper = ss.getMapper(MovieMapper.class);
 
