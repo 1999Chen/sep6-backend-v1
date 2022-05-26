@@ -1,9 +1,8 @@
-package com.example.sep6backendv1.entity;
+package com.example.sep6backendv1.model;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 
-@TableName(value = "movies")
+//@TableName(value = "movies")
 public class Movie {
     @TableField(value = "id")
     private int id;

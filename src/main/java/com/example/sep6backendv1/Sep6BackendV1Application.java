@@ -1,14 +1,9 @@
 package com.example.sep6backendv1;
 
-import com.example.sep6backendv1.entity.Movie;
 import com.google.api.gax.paging.Page;
-import org.apache.ibatis.type.MappedTypes;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import com.google.cloud.storage.Bucket;
-import com.google.cloud.storage.BucketInfo;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageOptions;
 

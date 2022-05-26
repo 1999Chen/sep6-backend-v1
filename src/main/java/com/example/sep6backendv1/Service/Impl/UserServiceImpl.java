@@ -1,28 +1,25 @@
 package com.example.sep6backendv1.Service.Impl;
 
-import com.example.sep6backendv1.Service.IMovieService;
+import com.example.sep6backendv1.Service.IUserService;
 import com.example.sep6backendv1.connection.MyBatisConnection;
 import com.example.sep6backendv1.model.Movie;
 import com.example.sep6backendv1.mapper.MovieMapper;
-//import com.mysql.cj.jdbc.Driver;
 import org.apache.ibatis.session.SqlSession;
-
 import org.springframework.stereotype.Service;
 
-
-import java.sql.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 
 @Service
-public class MovieServiceImpl implements IMovieService {
+public class UserServiceImpl implements IUserService {
 
 
 
     MovieMapper movieMapper;
 
-    public MovieServiceImpl() throws ClassNotFoundException, SQLException {
+    public UserServiceImpl() throws ClassNotFoundException, SQLException {
         SqlSession ss = MyBatisConnection.getConnection();
         movieMapper = ss.getMapper(MovieMapper.class);
 
@@ -40,14 +37,9 @@ public class MovieServiceImpl implements IMovieService {
 
     @Override
     public Movie getMovieById(int id) {
+
         Movie movie = movieMapper.selectMovie(id);
         return  movie;
-    }
-
-    @Override
-    public List<Movie> getMoviesByTitle(String title) {
-        List<Movie>list  = movieMapper.selectMoviesByTitle("%"+title+"%");
-        return list;
     }
 
     @Override
@@ -70,6 +62,7 @@ public class MovieServiceImpl implements IMovieService {
         list = movieMapper.selectMovieByYear(minYear,maxYear);
         return list;
     }
+
 
     @Override
     public List<Movie> getAllMovies() throws ClassNotFoundException, SQLException {

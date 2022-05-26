@@ -1,7 +1,7 @@
 package com.example.sep6backendv1.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.sep6backendv1.entity.Movie;
+import com.example.sep6backendv1.model.Movie;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -14,6 +14,8 @@ public interface MovieMapper extends BaseMapper<Movie> {
     Movie selectMovie(Integer id);
 
     List<Movie> selectMovieByYear(@Param("minYear") int minYear, @Param("maxYear") int maxYear);
+
+    List<Movie> selectMoviesByTitle(String title);
 
 
 }
