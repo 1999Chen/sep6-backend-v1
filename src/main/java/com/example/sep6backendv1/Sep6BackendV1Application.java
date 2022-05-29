@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.google.cloud.storage.Bucket;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageOptions;
+import org.springframework.web.bind.annotation.GetMapping;
 
 //@MappedTypes(Movie.class)
 //@MapperScan("com.example.sep6backendv1.mapper")
@@ -29,6 +30,11 @@ public class Sep6BackendV1Application {
 //		authImplicit();
 
 		SpringApplication.run(Sep6BackendV1Application.class, args);
+	}
+
+	@GetMapping("/")
+	public String hello() {
+		return "hello world!";
 	}
 
 }

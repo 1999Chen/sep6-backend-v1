@@ -4,7 +4,7 @@ server:
     context-path: /${spring.application.name}
 spring:
   application:
-    name: sep6
+    name:
   datasource:
     #    url: jdbc:mysql://10.110.30.4:3307/uni-cache?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
     url: jdbc:mysql:///main_schema?cloudSqlInstance=sep6-350713:europe-west4:sep6sql&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=sep6

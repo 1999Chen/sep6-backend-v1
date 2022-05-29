@@ -16,6 +16,8 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -61,7 +63,10 @@
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-extension</artifactId>
-			<version>3.4.2</version>
+			<version>
+				3.4.2
+			</version>
+
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -93,18 +98,21 @@
 			<groupId>com.google.cloud</groupId>
 			<artifactId>google-cloud-storage</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.1.1</version>
-		</dependency>
+
+
 
 		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.4.2</version>
+			<groupId>com.google.cloud.functions</groupId>
+			<artifactId>functions-framework-api</artifactId>
+			<version>1.0.4</version>
+			<scope>provided</scope>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.cloud</groupId>-->
+<!--			<artifactId>spring-cloud-gcp-starter-data-spanner</artifactId>-->
+<!--			<version>1.2.8.RELEASE</version>-->
+<!--		</dependency>-->
 
 
 	</dependencies>
@@ -125,11 +133,22 @@
 
 
 	<build>
+			<finalName>backend</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+
+				<groupId>com.google.cloud.functions</groupId>
+				<artifactId>function-maven-plugin</artifactId>
+				<version>0.10.0</version>
+				<configuration>
+					<functionTarget>com.example.sep6backendv1.Sep6BackendV1Application</functionTarget>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
