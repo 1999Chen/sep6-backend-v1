@@ -25,7 +25,7 @@
     </select>
 
     <select id="selectStarsByMovie"  resultMap="PeopleResult">
-        select * from people where id =(select person_id from stars where movie_id = #{movie_id})
+        select * from people where id in (select person_id from stars where movie_id = #{movie_id})
     </select>
 
     <select id="selectDirectorsByMovie"  resultMap="PeopleResult">

@@ -18,7 +18,6 @@ public class MovieController {
     @Autowired
     private IMovieService movieService;
 
-
     @GetMapping("/getMovieById")
     public Movie getMovieById(int id) {
         return movieService.getMovieById(id);
