@@ -5,5 +5,5 @@ steps:
 
 
   - name: gcr.io/cloud-builders/docker
-    args: [ 'build', '-t', 'gcr.io/sep6-350713/docker-image-1', '--build-arg=JAR_FILE=target/build-artifact', '.' ]
-    images: [ 'gcr.io/sep6-350713/docker-image-1' ]
+    args: [ 'build', '-t', 'gcr.io/sep6-v2/docker-image-1', '--build-arg=JAR_FILE=target/build-artifact', '.' ]
+    images: [ 'gcr.io/sep6-v2/docker-image-1' ]
