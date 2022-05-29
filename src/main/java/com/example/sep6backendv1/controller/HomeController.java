@@ -36,4 +36,9 @@ public class HomeController {
         return "Hello World111111!";
     }
 
+    @RequestMapping("/2")
+    public String test2() {
+        return "Hello World22222222!";
+    }
+
 }
