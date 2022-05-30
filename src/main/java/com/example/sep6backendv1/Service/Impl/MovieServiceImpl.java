@@ -50,21 +50,7 @@ public class MovieServiceImpl implements IMovieService {
 
     @Override
     public List<Movie> getListTestById(int minYear, int maxYear) throws SQLException, ClassNotFoundException {
-//        Driver driver = new com.mysql.cj.jdbc.Driver();
-//        Class.forName("com.mysql.jdbc.Driver");
-//        Connection conn = DriverManager.getConnection("jdbc:mysql:///main_schema?cloudSqlInstance=sep6-350713:europe-west4:sep6sql&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=sep6");
-//        Statement stmt = conn.createStatement();
-//        ResultSet rs = stmt.executeQuery("SELECT * FROM movies WHERE year < "+year);
-//        System.out.println("service ends "+year);
         List<Movie> list = new ArrayList<Movie>() ;
-//        while (rs.next()) {
-//            String title = rs.getString("title");
-//            int movieYear = rs.getInt("year");
-//            int movieId = rs.getInt("id");
-//            Movie movie = new Movie(movieId,movieYear,title);
-//            list.add(movie);
-//        }
-//        System.out.println(list.toArray());
         list = movieMapper.selectMovieByYear(minYear,maxYear);
         return list;
     }
