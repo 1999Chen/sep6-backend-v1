@@ -1,7 +1,0 @@
-runtime: java11
-env: standard
-runtime_config:
-  jdk: openjdk11
-handlers:
-  - url: /.*
-    script: this file is required
