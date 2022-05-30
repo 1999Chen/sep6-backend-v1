@@ -43,9 +43,9 @@ jobs:
         with:
 
 #          service-account: ${{ secrets.SERVICE_ACCOUNT }}
-          service-account: lsy1999lsy@gmail.com
+          service-account: 200715044223-compute@developer.gserviceaccount.com
           project-id: sep6-v2
-          config-files: 'sep6-backend-v1/app.yaml'
+          config-files: 'sep6-backend-v1/app.yaml','KEY_FILE.json'
       # Optional
       #    service-version: 3                          #default value : ""
           delete-previous-versions: true              #default value : false
