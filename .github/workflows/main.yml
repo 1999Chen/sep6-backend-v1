@@ -41,11 +41,11 @@ jobs:
         uses: vijayp23/deploy-gae-action@1.0.2
 
         with:
-          
+
 #          service-account: ${{ secrets.SERVICE_ACCOUNT }}
           service-account: lsy1999lsy@gmail.com
           project-id: sep6-v2
-          config-files: './app.yaml'
+          config-files: 'sep6-backend-v1/app.yaml'
       # Optional
       #    service-version: 3                          #default value : ""
           delete-previous-versions: true              #default value : false
