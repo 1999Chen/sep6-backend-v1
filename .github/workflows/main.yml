@@ -43,7 +43,7 @@ jobs:
         with:
           
 #          service-account: ${{ secrets.SERVICE_ACCOUNT }}
-          service-account: 200715044223-compute@developer.gserviceaccount.com
+          service-account: lsy1999lsy@gmail.com
           project-id: sep6-v2
           config-files: './app.yaml'
       # Optional
