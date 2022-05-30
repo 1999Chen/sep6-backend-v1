@@ -42,7 +42,7 @@ jobs:
 
         with:
 #          service-account: ${{ secrets.SERVICE_ACCOUNT }}
-          service-account: Compute Engine default service account
+          service-account: 200715044223-compute@developer.gserviceaccount.com
           project-id: sep6-v2
           config-files: './app.yml'
       # Optional
