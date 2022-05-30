@@ -11,7 +11,7 @@ import java.util.List;
 public interface UserMapper extends BaseMapper<User> {
     List<User> getAllUsers();
 
-    User selectUser(String name);
+    User selectUserByUsername(String username);
 
 
 

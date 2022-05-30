@@ -15,5 +15,7 @@
     <mappers>
         <mapper resource="mappers/MovieMapper.xml" />
         <mapper resource="mappers/PeopleMapper.xml" />
+        <mapper resource="mappers/UserMapper.xml" />
+
     </mappers>
 </configuration>

@@ -18,12 +18,8 @@
     </select>
 
 
-    <select id="selectUserByName" resultType="com.example.sep6backendv1.model.User">
-        select * from users where id = #{name}
-    </select>
-
-    <select id="selectUserByYear"  resultMap="UserResult">
-        select * from users where year &lt; #{maxYear} and year &gt; #{minYear}
+    <select id="selectUserByUsername" resultType="com.example.sep6backendv1.model.User">
+        select * from users where user_name = #{username}
     </select>
 
 </mapper>
