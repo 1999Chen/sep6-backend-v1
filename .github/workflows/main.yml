@@ -43,10 +43,10 @@ jobs:
         with:
 #          service-account: ${{ secrets.SERVICE_ACCOUNT }}
           service-account: 200715044223-compute@developer.gserviceaccount.com
-          project-id: sep6-v2
+          #   project-id: sep6-v2
           config-files: './app.yml'
       # Optional
-          service-version: 3                          #default value : ""
+      #    service-version: 3                          #default value : ""
           delete-previous-versions: true              #default value : false
       #    service-name: ${{ secrets.SERVICE_NAME }}   #default value : default
           no-cache: false                             #default value : false
