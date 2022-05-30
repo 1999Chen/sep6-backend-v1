@@ -48,7 +48,7 @@ jobs:
       # Optional
           service-version: 3                          #default value : ""
           delete-previous-versions: true              #default value : false
-          service-name: ${{ secrets.SERVICE_NAME }}   #default value : default
+      #    service-name: ${{ secrets.SERVICE_NAME }}   #default value : default
           no-cache: false                             #default value : false
           debug: false                                #default value : false
 
