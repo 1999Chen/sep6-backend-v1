@@ -3,7 +3,7 @@
 <mapper namespace="com.example.sep6backendv1.mapper.UserMapper">
 
     <resultMap type="com.example.sep6backendv1.model.User" id="UserResult">
-        <id property="user_name" column="user_name" />
+        <id property="username" column="username" />
         <result property="nickname" column="nickname" />
         <result property="password" column="password" />
  
@@ -17,12 +17,12 @@
 
 
     <select id="selectUserByUsername" resultType="com.example.sep6backendv1.model.User">
-        select * from users where user_name = #{username}
+        select * from users where username = #{username}
     </select>
 
 
     <select id="insertUser" >
-        insert into users (user_name,password,nickname) values (#{user_name},#{password},#{nickname})
+        insert into users (username,password,nickname) values (#{username},#{password},#{nickname})
     </select>
 
 
