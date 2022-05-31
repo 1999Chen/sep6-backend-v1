@@ -62,7 +62,7 @@ public class MovieController {
     }
 
     @GetMapping("/getVotesById")
-    public double getVotesById(int id) {
+    public Integer getVotesById(int id) {
         return movieService.getVotesById(id);
     }
 

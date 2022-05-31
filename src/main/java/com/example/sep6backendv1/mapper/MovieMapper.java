@@ -21,8 +21,8 @@ public interface MovieMapper extends BaseMapper<Movie> {
 
     List<Movie> selectMoviesByStar(Integer personId);
 
-    int selectRatingById(Integer id);
+    double selectRatingById(Integer id);
 
-    double selectVotesById(Integer id);
+    Integer selectVotesById(Integer id);
 
 }

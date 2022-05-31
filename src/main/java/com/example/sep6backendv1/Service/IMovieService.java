@@ -16,5 +16,5 @@ public interface IMovieService {
     List<Movie> getMoviesByStar(int personId);
 
     double getRatingById(int id);
-    double getVotesById(int id);
+    Integer getVotesById(int id);
 }

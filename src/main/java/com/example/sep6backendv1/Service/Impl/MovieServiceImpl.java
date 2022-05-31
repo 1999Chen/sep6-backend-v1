@@ -114,7 +114,7 @@ public class MovieServiceImpl implements IMovieService {
     }
 
     @Override
-    public double getVotesById(int id){
+    public Integer getVotesById(int id){
         return movieMapper.selectVotesById(id);
     }
 

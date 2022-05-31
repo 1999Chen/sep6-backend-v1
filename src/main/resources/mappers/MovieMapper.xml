@@ -36,7 +36,7 @@
         select rating from ratings where movie_id = #{movie_id}
     </select>
 
-    <select id="selectVotesById"  resultType="double">
+    <select id="selectVotesById"  resultType="Integer">
         select votes from ratings where movie_id = #{movie_id}
     </select>
 
