@@ -24,4 +24,20 @@
         select * from movies where year &lt; #{maxYear} and year &gt; #{minYear}
     </select>
 
+    <select id="selectMoviesByDirector"  resultMap="MovieResult">
+        select * from movies where id in (select movie_id from directors where person_id = #{person_id})
+    </select>
+
+    <select id="selectMoviesByStar"  resultMap="MovieResult">
+        select * from movies where id in (select movie_id from stars where person_id = #{person_id})
+    </select>
+
+    <select id="selectRatingById"  resultType="double">
+        select rating from ratings where movie_id = #{movie_id}
+    </select>
+
+    <select id="selectVotesById"  resultType="double">
+        select votes from ratings where movie_id = #{movie_id}
+    </select>
+
 </mapper>

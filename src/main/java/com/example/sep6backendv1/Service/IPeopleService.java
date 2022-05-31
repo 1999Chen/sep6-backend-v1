@@ -8,6 +8,8 @@ public interface IPeopleService {
 
     List<People> selectStarsByMovie(int movieId);
     List<People> selectDirectorsByMovie(int movieId);
-
+    People selectPeople(int id);
+    People selectDirectorById(int id);
+    People selectStarById(int id);
 
 }

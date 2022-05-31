@@ -20,6 +20,12 @@ public class PeopleController {
     @Autowired
     private IPeopleService peopleService;
 
+    @GetMapping("/getPeopleById")
+    public People getPeopleById(int id) {
+        return peopleService.selectPeople(id);
+    }
+
+
     @GetMapping("/getStarsByMovie")
     public List<People> getStarsById(int id) {
         return peopleService.selectStarsByMovie(id);
@@ -30,6 +36,5 @@ public class PeopleController {
     public List<People> getDirectorsById(int id) {
         return peopleService.selectDirectorsByMovie(id);
     }
-
 
 }

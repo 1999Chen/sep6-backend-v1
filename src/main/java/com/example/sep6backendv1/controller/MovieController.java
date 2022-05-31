@@ -41,5 +41,30 @@ public class MovieController {
         return movieService.getMoviesByTitle(title);
     }
 
+    @GetMapping("/getMoviesByDirector")
+    public List<Movie> getMoviesByDirector(int id)  {
+        return movieService.getMoviesByDirector(id);
+    }
+
+    @GetMapping("/getMoviesByStar")
+    public List<Movie> getMoviesByStar(int id)  {
+        return movieService.getMoviesByStar(id);
+    }
+
+    @GetMapping("/testBy")
+    public Movie testBy(int id) {
+        return movieService.getMovieById(id);
+    }
+
+    @GetMapping("/getRatingById")
+    public double getRatingById(int id) {
+        return movieService.getRatingById(id);
+    }
+
+    @GetMapping("/getVotesById")
+    public double getVotesById(int id) {
+        return movieService.getVotesById(id);
+    }
+
 
 }

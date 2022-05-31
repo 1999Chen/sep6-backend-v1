@@ -10,6 +10,11 @@ public interface IMovieService {
     List<Movie> getListTestById(int minYear, int maxYear) throws SQLException, ClassNotFoundException;
     List<Movie> getAllMovies() throws ClassNotFoundException, SQLException;
     Movie getMovieById(int id) ;
-/*    String get(String id);*/
+    /*    String get(String id);*/
 
+    List<Movie> getMoviesByDirector(int personId);
+    List<Movie> getMoviesByStar(int personId);
+
+    double getRatingById(int id);
+    double getVotesById(int id);
 }

@@ -92,10 +92,39 @@ public class MovieServiceImpl implements IMovieService {
 //        Movie movie = ss.selectOne("selectMovie",15414);
 //
 //        return movie.toString();
-
-
-
     }
+
+    @Override
+    public List<Movie> getMoviesByDirector(int personId) {
+        List<Movie> list = new ArrayList<Movie>() ;
+        list = movieMapper.selectMoviesByDirector(personId);
+        return list ;
+    }
+
+    @Override
+    public List<Movie> getMoviesByStar(int personId) {
+        List<Movie> list = new ArrayList<Movie>() ;
+        list =  movieMapper.selectMoviesByStar(personId);
+        return list ;
+    }
+
+    @Override
+    public double getRatingById(int id){
+        return movieMapper.selectRatingById(id);
+    }
+
+    @Override
+    public double getVotesById(int id){
+        return movieMapper.selectVotesById(id);
+    }
+
+
+
+
+
+
+
+
 
 
 

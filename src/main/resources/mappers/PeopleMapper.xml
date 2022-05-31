@@ -4,15 +4,15 @@
 
     <resultMap type="com.example.sep6backendv1.model.People" id="PeopleResult">
         <id property="id" column="id" />
-        <result property="year" column="year" />
-        <result property="title" column="title" />
+        <result property="birth" column="birth" />
+        <result property="name" column="name" />
     </resultMap>
 
     <select id="getPeople" resultMap="PeopleResult">
         select * from people
     </select>
 
-    <select id="selectPeopleById" resultType="com.example.sep6backendv1.model.People">
+    <select id="selectPeople" resultType="com.example.sep6backendv1.model.People">
         select * from people where id = #{id}
     </select>
 
@@ -21,7 +21,7 @@
     </select>
 
     <select id="selectPeopleByYear"  resultMap="PeopleResult">
-        select * from people where year &lt; #{maxYear} and year &gt; #{minYear}
+        select * from people where birth &lt; #{maxYear} and birth &gt; #{minYear}
     </select>
 
     <select id="selectStarsByMovie"  resultMap="PeopleResult">

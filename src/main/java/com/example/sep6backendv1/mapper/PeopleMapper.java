@@ -20,6 +20,7 @@ public interface PeopleMapper extends BaseMapper<People> {
 
     People selectPeopleByMovie(String name);
 
+    People selectPeople(int id);
 
 
 }

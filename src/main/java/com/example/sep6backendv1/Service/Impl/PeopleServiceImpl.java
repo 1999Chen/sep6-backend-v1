@@ -14,7 +14,6 @@ import java.util.List;
 @Service
 public class PeopleServiceImpl implements IPeopleService {
 
-
     PeopleMapper peopleMapper;
     Gson gson;
 
@@ -34,4 +33,16 @@ public class PeopleServiceImpl implements IPeopleService {
     public List<People> selectDirectorsByMovie(int movieId) {
         return peopleMapper.selectDirectorsByMovie(movieId);
     }
+
+
+    @Override
+    public People selectPeople(int id){return peopleMapper.selectPeople(id);}
+
+    @Override
+    public People selectDirectorById(int id){return null;}
+
+
+
+    @Override
+    public People selectStarById(int id){return null;}
 }
