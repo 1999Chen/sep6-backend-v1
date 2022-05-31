@@ -4,9 +4,7 @@
 
     <resultMap type="com.example.sep6backendv1.model.User" id="UserResult">
         <id property="user_name" column="user_name" />
-        <result property="age" column="age" />
-        <result property="description" column="description" />
-        <result property="gender" column="gender" />
+        <result property="nickname" column="nickname" />
         <result property="password" column="password" />
  
 

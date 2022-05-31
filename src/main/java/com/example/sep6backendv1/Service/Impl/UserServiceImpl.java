@@ -18,11 +18,11 @@ import java.util.List;
 public class UserServiceImpl implements IUserService {
 
 
-    com.example.sep6backendv1.mapper.UserMapper UserMapper;
+    UserMapper userMapper;
 
     public UserServiceImpl() throws ClassNotFoundException, SQLException {
         SqlSession ss = MyBatisConnection.getConnection();
-        UserMapper = ss.getMapper(UserMapper.class);
+        userMapper = ss.getMapper(UserMapper.class);
 
 //        Class.forName("com.mysql.jdbc.Driver");
 //
@@ -39,14 +39,14 @@ public class UserServiceImpl implements IUserService {
     @Override
     public User getUserById(String username) {
 
-        User User = UserMapper.selectUserByUsername(username);
+        User User = userMapper.selectUserByUsername(username);
         return  User;
     }
 
     @Override
     public User checkUser(String username) {
         User user = new User();
-        user = UserMapper.selectUserByUsername(username);
+        user = userMapper.selectUserByUsername(username);
         return user;
     }
 
@@ -54,7 +54,7 @@ public class UserServiceImpl implements IUserService {
     public User addUser(String username, String password, String nickname) {
 
         User user = new User(username,password,nickname);
-        UserMapper.insertUser(username,password,nickname);
+        userMapper.insertUser(username,password,nickname);
         return user;
     }
 
