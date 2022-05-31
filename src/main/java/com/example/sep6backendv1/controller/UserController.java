@@ -4,10 +4,7 @@ import com.example.sep6backendv1.Service.IMovieService;
 import com.example.sep6backendv1.Service.IUserService;
 import com.example.sep6backendv1.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -27,5 +24,14 @@ public class UserController {
         return user;
     }
 
+    @PostMapping("/registerUser")
+    public User registerUser(String username,String password,String nickname) {
+        User user = userService.checkUser(username);
+        if (user==null){
+            return null;
+        }
+        else
+            return userService.addUser(username,password,nickname);
+    }
 
 }

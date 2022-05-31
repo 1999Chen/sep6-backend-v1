@@ -9,10 +9,10 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
-    List<User> getAllUsers();
+
 
     User selectUserByUsername(String username);
 
-
+    User insertUser(String username, String password, String nickname);
 
 }

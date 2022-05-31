@@ -43,8 +43,20 @@ public class UserServiceImpl implements IUserService {
         return  User;
     }
 
+    @Override
+    public User checkUser(String username) {
+        User user = new User();
+        user = UserMapper.selectUserByUsername(username);
+        return user;
+    }
 
+    @Override
+    public User addUser(String username, String password, String nickname) {
 
+        User user = new User(username,password,nickname);
+        UserMapper.insertUser(username,password,nickname);
+        return user;
+    }
 
 
 }
