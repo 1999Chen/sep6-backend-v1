@@ -26,11 +26,15 @@ public class UserController {
 
     @PostMapping("/registerUser")
     public User registerUser(String username,String password,String nickname) {
+        System.out.println("00000000");
         User user = userService.checkUser(username);
+        System.out.println("111111");
         if (user==null){
+            System.out.println("user is null");
             return null;
         }
         else
+            System.out.println(" adding user.....");
             return userService.addUser(username,password,nickname);
     }
 
