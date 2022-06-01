@@ -28,15 +28,6 @@
     </select>
 
 
-    <select id="insertUser" parameterType="com.example.sep6backendv1.model.User">
-        <selectKey keyProperty="id" resultType="_long" order="BEFORE">
-            select CAST(RANDOM * 100000 as INTEGER) a FROM SYSTEM.SYSDUMMY1
-        </selectKey>
-
-        insert into users (username,password,nickname) values (#{username},#{password},#{nickname})
-
-    </select>
-
 
     <select id="insertUser" parameterType="com.example.sep6backendv1.model.User">
         insert into users (username,password,nickname) values (#{username},#{password},#{nickname})
