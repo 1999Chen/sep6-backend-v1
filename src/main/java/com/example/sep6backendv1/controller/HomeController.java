@@ -51,4 +51,8 @@ public class HomeController {
         return "Hello World55555555!";
     }
 
+    @GetMapping("/6")
+    public String test6() {
+        return "Hello World666666!";
+    }
 }
