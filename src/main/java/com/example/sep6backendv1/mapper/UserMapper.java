@@ -15,8 +15,8 @@ public interface UserMapper extends BaseMapper<User> {
 
     User selectUserByUsername(String username);
 
-    @Insert("INSERT INTO users(username,password,nickname) VALUES (#{username},#{password},#{nickname})")
-    @SelectKey(statement = "SELECT LAST_INSERT_ID()", keyProperty = "id", before = false, resultType = Long.class)
+    @Insert("insert into users (username,password,nickname) values(#{username},#{password},#{nickname})")
+    @SelectKey(statement="call identity()", keyProperty="id", before=false, resultType=int.class)
     int insertAUser(User user);
 
     User insertUser(String username, String password, String nickname);
