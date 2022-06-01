@@ -23,7 +23,7 @@ public interface UserMapper extends BaseMapper<User> {
 
     List<Movie> getMovieList(String username);
 
-    @Insert("insert into movielist (username,movie_id) values(#{username},#{movie_id})")
+    @Insert("insert into movielist (username,movie_id) values(#{username},#{id})")
     void addMovieToList(Movielist movielist);
 
 
