@@ -58,5 +58,16 @@ public class UserServiceImpl implements IUserService {
         return user;
     }
 
+    @Override
+    public List<Movie> getMovieList(String username) {
+
+        return userMapper.getMovieList(username);
+    }
+
+    @Override
+    public void addMovieToList(String username, int id) {
+        userMapper.addMovieToList(username,id);
+    }
+
 
 }

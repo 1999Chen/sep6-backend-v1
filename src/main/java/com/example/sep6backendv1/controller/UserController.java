@@ -2,6 +2,7 @@ package com.example.sep6backendv1.controller;
 
 import com.example.sep6backendv1.Service.IMovieService;
 import com.example.sep6backendv1.Service.IUserService;
+import com.example.sep6backendv1.model.Movie;
 import com.example.sep6backendv1.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -37,5 +38,20 @@ public class UserController {
             System.out.println(" adding user.....");
             return userService.addUser(username,password,nickname);
     }
+
+    @GetMapping("/getMovieList")
+    public List<Movie> getMovieList(String username) {
+        System.out.println("getMovieList");
+       return  userService.getMovieList(username);
+    }
+
+
+    @PostMapping("/addMovieToList")
+    public void addMovieToList(String username,int id) {
+        System.out.println("addMovieToList");
+ userService.addMovieToList(username,id);
+    }
+
+
 
 }

@@ -6,10 +6,17 @@
         <id property="username" column="username" />
         <result property="nickname" column="nickname" />
         <result property="password" column="password" />
- 
-
 
     </resultMap>
+
+
+    <resultMap type="com.example.sep6backendv1.model.Movie" id="MovieResult">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="year" column="year" />
+
+    </resultMap>
+
 
     <select id="getUsers" resultMap="UserResult">
         select * from users
@@ -25,5 +32,12 @@
         insert into users (username,password,nickname) values (#{username},#{password},#{nickname})
     </select>
 
+    <select id="getMovieList" resultMap="MovieResult" >
+        select * from movies where id in (select movie_id from movieList where username = #{username})
+    </select>
+
+    <select id="addMovieToList" >
+        insert into movieList (username,movie_id) values (#{username},#{movie_id})
+    </select>
 
 </mapper>

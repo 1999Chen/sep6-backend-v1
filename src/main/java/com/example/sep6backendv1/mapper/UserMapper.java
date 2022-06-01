@@ -15,4 +15,10 @@ public interface UserMapper extends BaseMapper<User> {
 
     User insertUser(String username, String password, String nickname);
 
+    List<Movie> getMovieList(String username);
+
+    void addMovieToList(String username,int id);
+
+
+
 }
