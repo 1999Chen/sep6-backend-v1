@@ -50,6 +50,8 @@ public class UserController {
     @PostMapping("/addMovieToList")
     public void addMovieToList(@RequestBody Movielist movielist) {
         System.out.println("addMovieToList");
+        System.out.println("addMovie username "+movielist.getUsername());
+        System.out.println("addMovie id "+movielist.getId());
         userService.addMovieToList(movielist.getUsername(),movielist.getId());
     }
 
