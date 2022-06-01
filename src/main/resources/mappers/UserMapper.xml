@@ -33,11 +33,11 @@
     </select>
 
     <select id="getMovieList" resultMap="MovieResult" >
-        select * from movies where id in (select movie_id from movieList where username = #{username})
+        select * from movies where id in (select movie_id from movielist where username = #{username})
     </select>
 
     <select id="addMovieToList" >
-        insert into movieList (username,movie_id) values (#{username},#{movie_id})
+        insert into movielist (username,movie_id) values (#{username},#{movie_id})
     </select>
 
 </mapper>
