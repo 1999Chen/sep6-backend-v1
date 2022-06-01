@@ -39,6 +39,7 @@ public class UserController {
             return userService.addUser(user.getUsername(),user.getPassword(), user.getNickname());*/
     return userService.addUser("ni1","asd","asd");
 
+
     }
 
     @GetMapping("/getMovieList")
