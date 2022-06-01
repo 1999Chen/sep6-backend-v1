@@ -52,9 +52,10 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User addUser(String username, String password, String nickname) {
-
+        System.out.println("user mapper start");
         User user = new User(username,password,nickname);
         userMapper.insertUser(username,password,nickname);
+        System.out.println("user mapper finished");
         return user;
     }
 

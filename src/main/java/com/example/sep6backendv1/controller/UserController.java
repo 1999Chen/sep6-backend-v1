@@ -27,7 +27,7 @@ public class UserController {
 
     @PostMapping("/registerUser")
     public User registerUser(@RequestBody User user) {
-        System.out.println("00000000");
+        System.out.println("username"+user.getUsername());
         userService.checkUser(user.getUsername());
         System.out.println("111111");
         if (user.getUsername()!=null){
