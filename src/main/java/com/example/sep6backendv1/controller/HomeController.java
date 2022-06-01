@@ -14,7 +14,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello World!";
+        return "Hello Worldtesttesttest!";
     }
 
     @GetMapping("/test")
