@@ -3,6 +3,7 @@ package com.example.sep6backendv1.controller;
 import com.example.sep6backendv1.Service.IMovieService;
 import com.example.sep6backendv1.Service.IUserService;
 import com.example.sep6backendv1.model.Movie;
+import com.example.sep6backendv1.model.Movielist;
 import com.example.sep6backendv1.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -47,9 +48,9 @@ public class UserController {
 
 
     @PostMapping("/addMovieToList")
-    public void addMovieToList(String username,int id) {
+    public void addMovieToList(@RequestBody Movielist movielist) {
         System.out.println("addMovieToList");
- userService.addMovieToList(username,id);
+        userService.addMovieToList(movielist.getUsername(),movielist.getId());
     }
 
 
