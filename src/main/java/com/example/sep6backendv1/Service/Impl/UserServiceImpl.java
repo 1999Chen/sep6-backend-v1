@@ -54,8 +54,8 @@ public class UserServiceImpl implements IUserService {
     public User addUser(String username, String password, String nickname) {
         System.out.println("user mapper start");
         User user = new User(username,password,nickname);
-        userMapper.insertAUser(new User(username,password,nickname));
-        System.out.println("user mapper finished");
+        String result = userMapper.insertAUser(new User(username,password,nickname));
+        System.out.println("user mapper finished "+result);
 
         return user;
     }
