@@ -42,9 +42,14 @@ public class HomeController {
     }
 
 
-    @RequestMapping("/3")
-    public String test3() {
-        return "Hello World33333!";
+    @RequestMapping("/4")
+    public String test4() {
+        return "Hello World4444444!";
+    }
+
+    @GetMapping("/5")
+    public String test5() {
+        return "Hello World55555555!";
     }
 
 }
