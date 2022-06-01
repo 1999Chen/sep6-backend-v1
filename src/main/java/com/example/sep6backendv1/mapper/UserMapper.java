@@ -2,6 +2,7 @@ package com.example.sep6backendv1.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.example.sep6backendv1.model.Movie;
+import com.example.sep6backendv1.model.Movielist;
 import com.example.sep6backendv1.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -23,7 +24,7 @@ public interface UserMapper extends BaseMapper<User> {
     List<Movie> getMovieList(String username);
 
     @Insert("insert into movielist (username,movie_id) values(#{username},#{movie_id})")
-    void addMovieToList(String username,int id);
+    void addMovieToList(Movielist movielist);
 
 
 

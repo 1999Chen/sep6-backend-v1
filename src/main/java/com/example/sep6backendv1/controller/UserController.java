@@ -52,7 +52,7 @@ public class UserController {
         System.out.println("addMovieToList");
         System.out.println("addMovie username "+movielist.getUsername());
         System.out.println("addMovie id "+movielist.getId());
-        userService.addMovieToList(movielist.getUsername(),movielist.getId());
+        userService.addMovieToList(movielist);
     }
 
 

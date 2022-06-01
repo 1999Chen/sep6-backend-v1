@@ -1,6 +1,7 @@
 package com.example.sep6backendv1.Service;
 
 import com.example.sep6backendv1.model.Movie;
+import com.example.sep6backendv1.model.Movielist;
 import com.example.sep6backendv1.model.User;
 
 import java.sql.SQLException;
@@ -13,7 +14,7 @@ public interface IUserService {
     User addUser(String username,String password,String nickname);
 
     List<Movie> getMovieList(String username);
-    void addMovieToList(String username,int id);
+    void addMovieToList(Movielist movielist);
 
 
 }

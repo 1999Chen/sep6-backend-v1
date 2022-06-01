@@ -5,6 +5,7 @@ import com.example.sep6backendv1.connection.MyBatisConnection;
 import com.example.sep6backendv1.mapper.UserMapper;
 import com.example.sep6backendv1.model.Movie;
 import com.example.sep6backendv1.mapper.MovieMapper;
+import com.example.sep6backendv1.model.Movielist;
 import com.example.sep6backendv1.model.User;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Service;
@@ -66,8 +67,8 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public void addMovieToList(String username, int id) {
-        userMapper.addMovieToList(username,id);
+    public void addMovieToList(Movielist movielist) {
+        userMapper.addMovieToList(movielist);
     }
 
 
