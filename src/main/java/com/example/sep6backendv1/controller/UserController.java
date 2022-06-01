@@ -26,17 +26,17 @@ public class UserController {
     }
 
     @PostMapping("/registerUser")
-    public User registerUser(String username,String password,String nickname) {
+    public User registerUser(@RequestBody User user) {
         System.out.println("00000000");
-        User user = userService.checkUser(username);
+        userService.checkUser(user.getUsername());
         System.out.println("111111");
-        if (user==null){
-            System.out.println("user is null");
+        if (user.getUsername()!=null){
+            System.out.println("user exists");
             return null;
         }
         else
             System.out.println(" adding user.....");
-            return userService.addUser(username,password,nickname);
+            return userService.addUser(user.getUsername(),user.getPassword(), user.getNickname());
     }
 
     @GetMapping("/getMovieList")

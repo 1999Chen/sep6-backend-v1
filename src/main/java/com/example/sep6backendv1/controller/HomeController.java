@@ -41,7 +41,6 @@ public class HomeController {
         return "Hello World22222222!";
     }
 
-
     @RequestMapping("/4")
     public String test4() {
         return "Hello World4444444!";
