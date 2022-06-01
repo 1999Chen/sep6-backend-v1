@@ -28,7 +28,7 @@
     </select>
 
 
-    <select id="insertUser" >
+    <select id="insertUser" parameterType="com.example.sep6backendv1.model.User">
         insert into users (username,password,nickname) values (#{username},#{password},#{nickname})
     </select>
 
@@ -36,7 +36,7 @@
         select * from movies where id in (select movie_id from movielist where username = #{username})
     </select>
 
-    <select id="addMovieToList" >
+    <select id="addMovieToList" parameterType="com.example.sep6backendv1.model.User" >
         insert into movielist (username,movie_id) values (#{username},#{movie_id})
     </select>
 
