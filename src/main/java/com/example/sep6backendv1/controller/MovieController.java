@@ -25,16 +25,13 @@ public class MovieController {
 
     @GetMapping("/getMoviesByYear")
     public List<Movie> getMoviesByYear(int minYear,int maxYear) throws SQLException, ClassNotFoundException {
-        System.out.println("get!!!");
         return movieService.getListTestById(minYear,maxYear);
     }
-
 
     @GetMapping("/getAllMovies")
     public List<Movie> getAllMovies() throws SQLException, ClassNotFoundException {
         return movieService.getAllMovies();
     }
-
 
     @GetMapping("/getMoviesByTitle")
     public List<Movie> getMoviesByTitle(String title) throws SQLException, ClassNotFoundException {

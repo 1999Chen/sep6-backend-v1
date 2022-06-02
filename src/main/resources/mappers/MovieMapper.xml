@@ -12,7 +12,7 @@
         select * from movies
     </select>
 
-    <select id="selectMovie" resultType="com.example.sep6backendv1.model.Movie">
+    <select id="selectMovie" resultType="Movie">
         select * from movies where id = #{id}
     </select>
 
