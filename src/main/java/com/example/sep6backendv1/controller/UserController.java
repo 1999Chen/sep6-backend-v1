@@ -40,6 +40,8 @@ public class UserController {
             return userService.addUser(user.getUsername(),user.getPassword(), user.getNickname());
     }
 
+
+
     @GetMapping("/getMovieList")
     public List<Movie> getMovieList(String username) {
         System.out.println("getMovieList");
