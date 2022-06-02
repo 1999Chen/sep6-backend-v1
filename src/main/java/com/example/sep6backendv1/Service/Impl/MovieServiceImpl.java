@@ -24,16 +24,6 @@ public class MovieServiceImpl implements IMovieService {
         SqlSession ss = MyBatisConnection.getConnection();
         movieMapper = ss.getMapper(MovieMapper.class);
 
-//        Class.forName("com.mysql.jdbc.Driver");
-//
-//        Connection conn = DriverManager.getConnection(
-//                "jdbc:mysql://35.204.25.150:3306/main_schema?sep6-350713:europe-west4:sep6sql",
-//                "root",
-//                "MTingCat819"
-//        );
-//
-//        Statement st = conn.createStatement();
-//        this.movieMapper = movieMapper;
     }
 
     @Override

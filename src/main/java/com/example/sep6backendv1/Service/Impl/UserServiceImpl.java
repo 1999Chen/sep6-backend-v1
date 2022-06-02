@@ -63,6 +63,10 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public List<Movie> getMovieList(String username) {
+
+        List<Movie> list = userMapper.getMovieList(username);
+        System.out.println("list is "+list.size());
+        System.out.println("list is "+list.size());
         return userMapper.getMovieList(username);
     }
 
