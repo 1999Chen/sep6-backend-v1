@@ -22,7 +22,9 @@ public class UserController {
 
     @GetMapping("/getUserByUsername")
     public User getUserByUsername(String username) {
+        System.out.println("controller get user by name is start "+username);
         User user = userService.getUserById(username);
+        System.out.println("controller get user by name is finished "+username);
         return user;
     }
 

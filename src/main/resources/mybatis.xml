@@ -6,7 +6,7 @@
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url"  value = "jdbc:mysql:///main_schema?cloudSqlInstance=sep6-v2:europe-west3:sep6v2sql&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=root&amp;password=sep6" />
+                <property name="url"  value = "jdbc:mysql:///main_schema?cloudSqlInstance=sep6-v4:europe-west1:sep6sql&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=root&amp;password=lsy" />
 
             </dataSource>
         </environment>

@@ -40,7 +40,9 @@ public class UserServiceImpl implements IUserService {
     @Override
     public User getUserById(String username) {
 
+        System.out.println("get user serviceimpl"+username);
         User User = userMapper.selectUserByUsername(username);
+
         return  User;
     }
 
