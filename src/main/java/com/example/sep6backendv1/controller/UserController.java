@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @ResponseBody
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
