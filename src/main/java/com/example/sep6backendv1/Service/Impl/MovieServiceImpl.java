@@ -100,22 +100,15 @@ public class MovieServiceImpl implements IMovieService {
 
     @Override
     public double getRatingById(int id){
-        return movieMapper.selectRatingById(id);
+        double a = movieMapper.selectRatingById(id);
+        System.out.println("movie service impl rating is"+a);
+        return a;
     }
 
     @Override
     public Integer getVotesById(int id){
         return movieMapper.selectVotesById(id);
     }
-
-
-
-
-
-
-
-
-
 
 
 }
