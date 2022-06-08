@@ -55,6 +55,7 @@ public class MovieController {
 
     @GetMapping("/getRatingById")
     public double getRatingById(int id) {
+        System.out.println("test get rating");
         return movieService.getRatingById(id);
     }
 
