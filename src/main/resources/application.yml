@@ -9,7 +9,7 @@ spring:
     #    url: jdbc:mysql://10.110.30.4:3307/uni-cache?useUnicode=true&characterEncoding=UTF8&useSSL=false&serverTimezone=UTC
     url: jdbc:mysql:///main_schema?cloudSqlInstance=sep6-v4:europe-west1:sep6sql&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=lsy
     username: root
-    password: schoolidolava
+    password: lsy
     #    username: root
     #    password: Pcp@1024
     driver-class-name: com.mysql.jdbc.Driver
