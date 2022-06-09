@@ -19,12 +19,12 @@
 
 
     <select id="getUsers" resultMap="UserResult">
-        select * from users
+        select * from newUsers
     </select>
 
 
     <select id="selectUserByUsername" resultType="com.example.sep6backendv1.model.User">
-        select * from users where username = #{username}
+        select * from newUsers where username = #{username}
     </select>
 
 
