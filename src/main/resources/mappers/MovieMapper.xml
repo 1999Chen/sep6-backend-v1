@@ -8,6 +8,10 @@
         <result property="title" column="title" />
     </resultMap>
 
+    <select id="selectMoviesByTitle" resultMap="MovieResult">
+        select * from movies where title LIKE #{title}
+    </select>
+
     <select id="getMovie" resultMap="MovieResult">
         select * from movies
     </select>
@@ -16,9 +20,6 @@
         select * from movies where id = #{id}
     </select>
 
-    <select id="selectMoviesByTitle" resultMap="MovieResult">
-        select * from movies where title LIKE #{title}
-    </select>
 
     <select id="selectMovieByYear"  resultMap="MovieResult">
         select * from movies where year &lt; #{maxYear} and year &gt; #{minYear}

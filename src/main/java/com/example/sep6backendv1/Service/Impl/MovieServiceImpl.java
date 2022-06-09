@@ -23,7 +23,12 @@ public class MovieServiceImpl implements IMovieService {
     public MovieServiceImpl()  {
         SqlSession ss = MyBatisConnection.getConnection();
         movieMapper = ss.getMapper(MovieMapper.class);
+    }
 
+    @Override
+    public List<Movie> getMoviesByTitle(String title) {
+        List<Movie>list  = movieMapper.selectMoviesByTitle("%"+title+"%");
+        return list;
     }
 
     @Override
@@ -32,11 +37,7 @@ public class MovieServiceImpl implements IMovieService {
         return  movie;
     }
 
-    @Override
-    public List<Movie> getMoviesByTitle(String title) {
-        List<Movie>list  = movieMapper.selectMoviesByTitle("%"+title+"%");
-        return list;
-    }
+
 
     @Override
     public List<Movie> getListTestById(int minYear, int maxYear) throws SQLException, ClassNotFoundException {

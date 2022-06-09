@@ -9,13 +9,15 @@ import java.util.List;
 
 @Mapper
 public interface MovieMapper extends BaseMapper<Movie> {
+
+    List<Movie> selectMoviesByTitle(String title);
+
     List<Movie> getMovie();
 
     Movie selectMovie(Integer id);
 
     List<Movie> selectMovieByYear(@Param("minYear") int minYear, @Param("maxYear") int maxYear);
 
-    List<Movie> selectMoviesByTitle(String title);
 
     List<Movie> selectMoviesByDirector(Integer personId);
 

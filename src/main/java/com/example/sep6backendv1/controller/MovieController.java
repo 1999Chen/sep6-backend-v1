@@ -14,10 +14,13 @@ import java.util.List;
 @RequestMapping("/movie")
 public class MovieController {
 
-
     @Autowired
     private IMovieService movieService;
 
+    @GetMapping("/getMoviesByTitle")
+    public List<Movie> getMoviesByTitle(String title) throws SQLException, ClassNotFoundException {
+        return movieService.getMoviesByTitle(title);
+    }
     @GetMapping("/getMovieById")
     public Movie getMovieById(int id) {
         return movieService.getMovieById(id);
@@ -33,10 +36,7 @@ public class MovieController {
         return movieService.getAllMovies();
     }
 
-    @GetMapping("/getMoviesByTitle")
-    public List<Movie> getMoviesByTitle(String title) throws SQLException, ClassNotFoundException {
-        return movieService.getMoviesByTitle(title);
-    }
+
 
     @GetMapping("/getMoviesByDirector")
     public List<Movie> getMoviesByDirector(int id)  {
